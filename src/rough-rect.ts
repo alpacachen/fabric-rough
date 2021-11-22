@@ -26,5 +26,3 @@ export const RoughRect: {new (config: Partial<Pick<IRectOptions, 'left' | 'width
         }
     }
 })
-
-export default RoughRect
