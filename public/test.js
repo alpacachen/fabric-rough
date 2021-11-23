@@ -35,8 +35,8 @@ let line = new fabric.Line([0,0,30,30],{
     stroke: 'red',
     strokeWidth: 4,
 })
-let path = new fabric.Path('M 0 0 L 200 100 L 170 200 z', {fill: 'green'})
-let roughPath = new RoughPath('M80 230 A 45 45, 0, 0, 1, 125 275 L 125 230 Z', { fill: 'red' })
+let path = new fabric.Path('M230 80 A 45 45, 0, 1, 0, 275 125 L 275 80 Z', { fill: 'purple', left: 50, top: 50 })
+let roughPath = new RoughPath('M230 80 A 45 45, 0, 1, 0, 275 125 L 275 80 Z', { fill: 'purple', left: 50, top: 50 })
 canvas.add(roughCircle)
 canvas.add(rect)
 canvas.add(roughArc)

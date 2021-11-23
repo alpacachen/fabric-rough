@@ -8,18 +8,30 @@ export const RoughPath: {new (path: IPathOptions['path'], config: Options): fabr
     instance: null,
     roughOptions: null,
     initialize: function (path, options){
-        this.roughOptions = options.roughOption
+        this.roughOptions = options
         this.callSuper('initialize', path, options);
     },
     _render: function (ctx){
-        console.log('render')
         const rc = roughjs.canvas(ctx.canvas);
         if(this.instance){
             rc.draw(this.instance)
         }else {
-            console.log(this.pathOffset)
-            const path = this.path.map((o) => o.map(i => Number.isFinite(i) ? i - this.pathOffset.x : i)).join(' ')
-            console.log(path)
+            const l = -this.pathOffset.x;
+            const t = -this.pathOffset.y;
+            const path = this.path
+                .map((o) => o
+                    .map((i, index) => {
+                        if(Number.isFinite(i)){
+                            if(index % 2){ // x
+                                return i + l
+                            }else { // y
+                                return i + t
+                            }
+                        }else {
+                            return i
+                        }
+                    }))
+                .join(' ')
             this.instance = rc.path(path, this.roughOptions)
         }
     }
