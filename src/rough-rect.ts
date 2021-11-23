@@ -1,5 +1,5 @@
 import {fabric} from "fabric";
-import rough from 'roughjs/bin/rough'
+import roughjs from 'roughjs/bin/rough'
 import {IRectOptions} from "fabric/fabric-impl";
 import {Options} from "roughjs/bin/core";
 
@@ -12,7 +12,7 @@ export const RoughRect: {new (config: Partial<Pick<IRectOptions, 'left' | 'width
         this.callSuper('initialize', options);
     },
     _render: function (ctx){
-        const rc = rough.canvas(ctx.canvas);
+        const rc = roughjs.canvas(ctx.canvas);
         if(this.instance){
             rc.draw(this.instance)
         }else {
