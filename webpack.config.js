@@ -1,7 +1,5 @@
 const path = require('path')
-console.log(process.env.NODE_ENV)
 module.exports = (env, options) => {
-    console.log(env, options, 4455)
     return {
         mode: options.mode,
         entry: './src/index.ts',

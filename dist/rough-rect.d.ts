@@ -6,4 +6,3 @@ export declare const RoughRect: {
         roughOption?: Options;
     }): fabric.Rect;
 };
-export default RoughRect;
