@@ -1,6 +1,6 @@
 {
   "name": "fabric-rough",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Combine roughjs with fabricjs",
   "keywords": ["fabricjs", "rough", "canvas"],
   "repository": "github:alpacachen/fabric-rough.git",

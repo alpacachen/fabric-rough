@@ -1,4 +1,4 @@
-ripple-anything.js
+fabric-rough
 ========
 [![NPM Package][npm]][npm-url]
 [![Build Size][build-size]][build-size-url]
