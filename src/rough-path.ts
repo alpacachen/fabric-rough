@@ -1,9 +1,8 @@
-import {IPathOptions} from "fabric/fabric-impl";
 import {Options} from "roughjs/bin/core";
 import {fabric} from "fabric";
 import roughjs from 'roughjs/bin/rough'
 
-export const RoughPath: {new (path: IPathOptions['path'], config: Options): fabric.Path} = fabric.util.createClass(fabric.Path, {
+export const RoughPath: {new (path: string, config: Options): fabric.Path} = fabric.util.createClass(fabric.Path, {
     type: 'roughPath',
     instance: null,
     roughOptions: null,
