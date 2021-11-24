@@ -1,7 +1,9 @@
 {
   "name": "fabric-rough",
   "version": "1.0.11",
-  "description": "",
+  "description": "Combine roughjs with fabricjs",
+  "keywords": ["fabricjs", "rough", "canvas"],
+  "repository": "github:alpacachen/fabric-rough.git",
   "main": "dist/index.js",
   "scripts": {
     "serve": "npx webpack serve --mode=development",
