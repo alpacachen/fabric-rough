@@ -7,9 +7,9 @@ fabric-rough
 
 added RoughRect, RoughCircle, RoughPath, RoughLine, RoughArc basic class for fabric
 
-[play on stackblitz](https://stackblitz.com/edit/fabric-rough?file=index.tsx)
+[play on stackblitz](https://stackblitz.com/edit/fabric-rough-hkweks?file=index.tsx)
 
-#### Demo ####
+#### [Demo](https://fabric-rough-hkweks.stackblitz.io/) ####
 ![img.png](img.png)
 
 #### Related ####
