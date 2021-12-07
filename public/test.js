@@ -100,7 +100,7 @@ let canvas = new fabric.Canvas('c')
 // })
 // canvas.add(ellipse, roughEllipse)
 
-fabric.loadSVGFromURL('./gulou.svg',function (objects, options){
+fabric.loadSVGFromURL('./light.svg',function (objects, options){
     console.log(objects.map(o => o.type), 33)
     const list = objects/*.filter(o => o.type === 'polyline')*/
     canvas.add(RoughSvg(list, {...options, left: 10, top: 300   }))
