@@ -1,8 +1,6 @@
 import { fabric } from "fabric";
-import { ILineOptions } from "fabric/fabric-impl";
 import { Options } from "roughjs/bin/core";
+import { ILineOptions } from "fabric/fabric-impl";
 export declare const RoughLine: {
-    new (points: number[], config: Partial<ILineOptions> & {
-        roughOption?: Options;
-    }): fabric.Line;
+    new (points?: number[], config?: ILineOptions, roughOptions?: Options): fabric.Line;
 };
