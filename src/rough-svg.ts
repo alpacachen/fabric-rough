@@ -10,7 +10,7 @@ import {RoughCircle} from "./rough-circle";
 
 export const RoughSvg = (objects: Object[], options: any, roughOptions: Options = {}) => {
     const {height, width} = options
-    const group = new fabric.Group([], {...options, left: 30, top: 30})
+    const group = new fabric.Group([], options)
     for (const object of objects) {
         const {fill, stroke, strokeWidth, left, top, opacity} = object
         const roughOption = {
