@@ -1,13 +1,14 @@
 import {fabric} from "fabric";
 import roughjs from 'roughjs/bin/rough'
 import {Options} from "roughjs/bin/core";
+import {ILineOptions} from "fabric/fabric-impl";
 
-export const RoughLine: {new (points: number[], roughOption: Options): fabric.Line} = fabric.util.createClass(fabric.Line, {
+export const RoughLine: {new (points?: number[], config?: ILineOptions, roughOptions?: Options): fabric.Line} = fabric.util.createClass(fabric.Line, {
     type: 'roughLine',
     instance: null,
     roughOptions: null,
-    initialize: function (points, options){
-        this.roughOptions = options
+    initialize: function (points, options, roughOptions){
+        this.roughOptions = roughOptions
         this.callSuper('initialize', points, options);
     },
     _render: function (ctx){

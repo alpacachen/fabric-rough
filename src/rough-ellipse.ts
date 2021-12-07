@@ -3,7 +3,7 @@ import {IEllipseOptions} from "fabric/fabric-impl";
 import {Options} from "roughjs/bin/core";
 import roughjs from 'roughjs/bin/rough'
 
-export const RoughEllipse: {new (config: IEllipseOptions, roughOptions: Options): fabric.Ellipse} = fabric.util.createClass(fabric.Ellipse, {
+export const RoughEllipse: {new (config: IEllipseOptions, roughOptions?: Options): fabric.Ellipse} = fabric.util.createClass(fabric.Ellipse, {
     type: 'roughEllipse',
     instance: null,
     roughOptions: null,

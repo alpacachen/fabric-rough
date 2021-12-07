@@ -3,12 +3,12 @@ import roughjs from 'roughjs/bin/rough'
 import {IRectOptions} from "fabric/fabric-impl";
 import {Options} from "roughjs/bin/core";
 
-export const RoughRect: {new (config: Partial<Pick<IRectOptions, 'left' | 'width' | 'top' | 'height'>> & {roughOption?: Options}): fabric.Rect} = fabric.util.createClass(fabric.Rect, {
+export const RoughRect: {new (config: IRectOptions, roughOption?: Options): fabric.Rect} = fabric.util.createClass(fabric.Rect, {
     type: 'roughRect',
     instance: null,
     roughOptions: null,
-    initialize: function (options){
-        this.roughOptions = options.roughOption
+    initialize: function (options, roughOption){
+        this.roughOptions = roughOption
         this.callSuper('initialize', options);
     },
     _render: function (ctx){

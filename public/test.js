@@ -1,4 +1,5 @@
 let canvas = new fabric.Canvas('c')
+
 // const rect = new fabric.Rect({
 //     left: 10,
 //     top: 10,
@@ -12,10 +13,10 @@ let canvas = new fabric.Canvas('c')
 //     top: 10,
 //     width: 40,
 //     height: 40,
-//     roughOption: { fill: 'pink', stroke: 'blue' },
-// });
+// },{ fill: 'pink', stroke: 'green' });
 // canvas.add(rect);
 // canvas.add(roughRect);
+
 // const circle = new fabric.Circle({
 //     left: 10,
 //     top: 60,
@@ -99,7 +100,8 @@ let canvas = new fabric.Canvas('c')
 // })
 // canvas.add(ellipse, roughEllipse)
 
-fabric.loadSVGFromURL('./snow.svg',function (objects, options, elements,d,c){
+fabric.loadSVGFromURL('./gulou.svg',function (objects, options){
+    console.log(objects.map(o => o.type), 33)
     canvas.add(RoughSvg(objects, options))
     // console.log(objects, options, elements,d,c)
     // for (let i = 0; i < elements.length; i++) {

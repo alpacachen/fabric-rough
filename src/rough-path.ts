@@ -3,7 +3,7 @@ import {fabric} from "fabric";
 import roughjs from 'roughjs/bin/rough'
 import {IPathOptions, Point} from "fabric/fabric-impl";
 
-export const RoughPath: {new (path: string | Point[], config: IPathOptions, roughOption: Options): fabric.Path} = fabric.util.createClass(fabric.Path, {
+export const RoughPath: {new (path: string | Point[], config: IPathOptions, roughOption?: Options): fabric.Path} = fabric.util.createClass(fabric.Path, {
     type: 'roughPath',
     instance: null,
     roughOptions: null,
