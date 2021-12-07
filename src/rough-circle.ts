@@ -3,12 +3,12 @@ import {Options} from "roughjs/bin/core";
 import {fabric} from "fabric";
 import roughjs from 'roughjs/bin/rough'
 
-export const RoughCircle: {new (config: Partial<Pick<ICircleOptions, 'left' | 'radius' | 'top'>> & {roughOption?: Options}): fabric.Rect} = fabric.util.createClass(fabric.Circle, {
+export const RoughCircle: {new (config: ICircleOptions, roughOption?: Options): fabric.Rect} = fabric.util.createClass(fabric.Circle, {
     type: 'roughCircle',
     instance: null,
     roughOptions: null,
-    initialize: function (options){
-        this.roughOptions = options.roughOption
+    initialize: function (options, roughOption){
+        this.roughOptions = roughOption
         this.callSuper('initialize', options);
     },
     _render: function (ctx){
@@ -21,15 +21,15 @@ export const RoughCircle: {new (config: Partial<Pick<ICircleOptions, 'left' | 'r
     }
 })
 
-export const RoughArc: {new (config: Partial<Pick<ICircleOptions, 'left' | 'top' | 'startAngle' | 'endAngle' | 'width' | 'height'>> & {roughOption?: Options; closed?: boolean}): fabric.Rect} = fabric.util.createClass(fabric.Circle, {
+export const RoughArc: {new (config: ICircleOptions, roughOption?: Options, closed?: boolean): fabric.Rect} = fabric.util.createClass(fabric.Circle, {
     type: 'roughArc',
     instance: null,
     roughOptions: null,
     closed: null,
-    initialize: function (options){
-        this.roughOptions = options.roughOption
-        this.closed = options.closed
-        this.callSuper('initialize', options);
+    initialize: function (config, roughOption, closed){
+        this.roughOptions = roughOption
+        this.closed = closed
+        this.callSuper('initialize', config);
     },
     _render: function (ctx){
         const rc = roughjs.canvas(ctx.canvas);

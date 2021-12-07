@@ -102,7 +102,8 @@ let canvas = new fabric.Canvas('c')
 
 fabric.loadSVGFromURL('./gulou.svg',function (objects, options){
     console.log(objects.map(o => o.type), 33)
-    canvas.add(RoughSvg(objects, options))
+    const list = objects/*.filter(o => o.type === 'polyline')*/
+    canvas.add(RoughSvg(list, {...options}))
     // console.log(objects, options, elements,d,c)
     // for (let i = 0; i < elements.length; i++) {
     //     const element = elements[i]
@@ -120,6 +121,6 @@ fabric.loadSVGFromURL('./gulou.svg',function (objects, options){
     // }
     //
 
-    const obj = fabric.util.groupSVGElements(objects, {...options, left: 10, top: 300})
+    const obj = fabric.util.groupSVGElements(list, {...options, left: 10, top: 300})
     canvas.add(obj)
 })
