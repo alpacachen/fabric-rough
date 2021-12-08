@@ -1,8 +1,12 @@
 {
   "name": "fabric-rough",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "roughjs in fabricjs",
-  "keywords": ["fabricjs", "rough", "canvas"],
+  "keywords": [
+    "fabricjs",
+    "rough",
+    "canvas"
+  ],
   "repository": "github:alpacachen/fabric-rough.git",
   "main": "dist/index.js",
   "scripts": {
@@ -22,7 +26,5 @@
     "fabric": "*",
     "roughjs": "*"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
