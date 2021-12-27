@@ -3,7 +3,7 @@ import roughjs from 'roughjs/bin/rough'
 import {Options} from "roughjs/bin/core";
 import {IPolylineOptions} from "fabric/fabric-impl";
 
-export const RoughPolyline: {new (points: Array<{ x: number; y: number }>, options?: IPolylineOptions, roughOptions?: Options): fabric.Polyline} = fabric.util.createClass(fabric.Polyline,{
+export const RoughPolyline: {new (points: Array<{ x: number; y: number }>, options?: IPolylineOptions, roughOptions?: Options): fabric.Polygon} = fabric.util.createClass(fabric.Polygon,{
     type: 'roughPolyline',
     instance: null,
     roughOptions: null,
@@ -25,5 +25,10 @@ export const RoughPolyline: {new (points: Array<{ x: number; y: number }>, optio
             const points = this.points.map(({x,y}) => [x+l,y+t])
             this.instance = rc.linearPath(points,this.roughOptions)
         }
+    },
+    _toSVG: function (){
+        let r: string[] = this.callSuper('_toSVG');
+        r[0] = '<polygon '
+        return r
     }
 })

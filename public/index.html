@@ -1,7 +1,14 @@
 <html>
 <div>
     <canvas width="800" height="800" id="c"></canvas>
+    <button onclick="toSvg()"> to svg</button>
+    <div id="svg"></div>
 </div>
 <script src="index.js"></script>
 <script src="test.js"></script>
+<script>
+    function toSvg(){
+        document.getElementById('svg').innerHTML = canvas.toSVG()
+    }
+</script>
 </html>
